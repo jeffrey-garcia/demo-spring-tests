@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -31,6 +32,7 @@ public class ExampleConfiguration_0Tests {
 
 	@Test
 	public void bean1() {
+		TestPropertyValues.of("com.jeffrey.example.ExampleConfiguration.enabled=true").applyTo(this.context);
 		this.context.register(ExampleConfiguration.class);
 		this.context.refresh();
 		ExampleBean1 bean1 = this.context.getBean(ExampleBean1.class);
@@ -39,6 +41,7 @@ public class ExampleConfiguration_0Tests {
 
 	@Test
 	public void bean2() {
+		TestPropertyValues.of("com.jeffrey.example.ExampleConfiguration.enabled=true").applyTo(this.context);
 		this.context.register(ExampleConfiguration.class);
 		this.context.refresh();
 		ExampleBean2 bean2 = this.context.getBean(ExampleBean2.class);
