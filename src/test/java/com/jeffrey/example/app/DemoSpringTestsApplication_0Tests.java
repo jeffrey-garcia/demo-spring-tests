@@ -9,7 +9,7 @@ import static org.mockito.Mockito.mockStatic;
 /**
  * Verify Spring main app startup using static mockito
  */
-public class DemoSpringTestsApplication_1IT {
+public class DemoSpringTestsApplication_0Tests {
 
 	@Test
 	public void appStarted() {
